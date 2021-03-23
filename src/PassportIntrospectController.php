@@ -93,11 +93,12 @@ class PassportIntrospectController extends BaseController
 			$user = (new $userModel)->findOrFail($accessToken->user_id);
 		}*/
 
+		$sub = empty($accessToken->user_id) ? $accessToken->client_id : $accessToken->user_id;
 		$data = [
 			'active' => true,
 			'scope' => trim(implode(' ', $scopes)),
 			'client_id' => (string) $accessToken->client_id,
-			'sub' => (string) empty($accessToken->user_id) ? $accessToken->client_id : $accessToken->user_id,
+			'sub' => (string) $sub,
 			'exp' => (int) $exp->format('U'),
 			'iat' => (int) $iat->format('U'),
 			'nbf' => (int) $nbf->format('U'),

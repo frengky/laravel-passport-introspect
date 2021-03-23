@@ -14,7 +14,7 @@ $ composer require frengky/laravel-passport-introspect
 ```
 2. Add the service provider to your `config/app.php`
 ```
-\Frengky\PassportIntrospect\ServiceProvider::class
+Frengky\PassportIntrospect\ServiceProvider::class
 ```
 From now on the introspection endpoint route is available to access
 > POST /api/oauth2/introspect
