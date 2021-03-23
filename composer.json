@@ -1,0 +1,30 @@
+{
+    "name": "frengky/laravel-passport-introspect",
+    "description": "Laravel Passport Introspect Endpoint (RFC 7662)",
+    "keywords": ["laravel", "passport", "oauth", "oauth2", "introspection"],
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/frengky/laravel-passport-introspect",
+    "authors": [
+        {
+            "name": "Frengky",
+            "email": "frengky.lim@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "laravel/passport": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Frengky\\PassportIntrospect\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+              "Frengky\\PassportIntrospect\\ServiceProvider"
+            ]
+        }
+    }
+}
